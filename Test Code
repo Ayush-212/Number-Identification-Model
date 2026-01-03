@@ -1,0 +1,29 @@
+from PIL import Image, ImageDraw
+
+
+def create_better_digit(filename='test_digit.png'):
+    img = Image.new('L', (28, 28), color=0)
+    draw = ImageDraw.Draw(img)
+    points = [(8, 6), (20, 6), (10, 24)]
+    draw.line(points, fill=255, width=3)
+
+    img.save(filename)
+    print(f"Created optimized {filename}")
+
+    img.save(filename)
+    print(f"Created thicker {filename}")
+
+
+create_better_digit()
+
+img = image.load_img('test_digit.png', target_size=(
+    28, 28), color_mode='grayscale')
+img_array = image.img_to_array(img) / 255.0
+img_array = np.expand_dims(img_array, axis=0)
+
+pred = np.argmax(model.predict(img_array))
+print(f"New Prediction: {pred}")
+
+plt.imshow(img, cmap='gray')
+plt.title(f"New Thicker Input (Predicted: {pred})")
+plt.show()
