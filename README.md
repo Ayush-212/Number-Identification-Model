@@ -41,13 +41,10 @@ The CNN includes:
    - The script handles image inversion if needed and outputs the prediction with confidence.
 
 ## 📊 Results
-- **Training Accuracy**: ~98-99% on MNIST test set.
+- **Training Accuracy**: ~90-99% on MNIST test set.
 - **Custom Prediction**: Works best with clear, centered digits. Includes automatic preprocessing for color inversion.
 
 ## 🔧 Notes
 - Ensure `image.png` and `image2.png` is grayscale; the script resizes and preprocesses it.
 - For low-confidence predictions, check image quality or retrain with more epochs.
 - Model uses `.keras` format for compatibility.
-
-## 📝 License
-This project is for educational purposes. Feel free to modify and use!
